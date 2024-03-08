@@ -3,7 +3,7 @@
 body{
     font-family: "Englebert", cursive;
     min-height: 100vh;
-    background: linear-gradient(to right, #3a6a57,#54bd91);
+    background: linear-gradient(to right, #54bd91,#54bd91);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -95,6 +95,7 @@ body{
     transform: rotate(-5deg);
     z-index: -1;
     border-radius: 6px;
+    opacity: 0.1;
 }
 
 #particles-container {
@@ -108,11 +109,11 @@ body{
 
 .particle {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url('imagens/folhas.png');
+    width: 70px;
+    height: 70px;
+    background-image: url('imagens/uvita.png');
     background-size: cover;
-    opacity: 0.5;
+    opacity: 1;
 }
 .login-card-logo{
     display: flex;
@@ -131,7 +132,7 @@ body{
     align-items: center;
     margin-top: 25px;
 }
-.boxi{
+.boxi {
     width: 350px;
     background: #ffffffca;
     height: 40px;
@@ -139,7 +140,11 @@ body{
     border-radius: 20px;
     outline: none;
     margin: 20px;
+    padding: 10px; 
+    text-align: left;
+    text-indent: 10px;
 }
+
  .btn{
     width: 300px;
     height: 45px;
@@ -150,3 +155,89 @@ body{
     margin-top: 80px;
     border-radius: 15px;
 }
+.btn:hover{
+    background: #54bd91;
+    transition: 0.3s;
+}
+.nop{
+    margin-top: 10px;
+}
+.nop a{
+    color: #9641f7;
+    text-decoration: none;
+}
+.esqS a{
+    color: #9641f7;
+    font-size: 12px;
+    margin-left: -97px;
+}
+
+  .lembre .checki {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 35px;
+    top: 5px;
+  }
+
+  .lembre .checki::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .lembre .checki,
+  .lembre .checki::after {
+    transition: all 100ms ease-out;
+  }
+
+  .lembre .checki::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .lembre input[type=checkbox] {
+    cursor: default;
+  }
+
+  .lembre .checki:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .lembre .checki:checked {
+    background-color: #9641f7;
+  }
+
+  .lembre .checki:checked::after {
+    background-color: #fff;
+    left: 18px;
+  }
+
+  .lembre :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .lembre .checki:checked:hover {
+    background-color: #54bd91;
+    transition: 0.4s;
+  }
+
+  .demi{
+    margin-right: 208px;
+    margin-left: 4px;
+  }
