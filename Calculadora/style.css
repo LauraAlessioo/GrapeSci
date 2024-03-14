@@ -1,0 +1,78 @@
+body{
+    font-weight: bold;
+    margin: auto;
+    background-color: #54BC90;
+}
+img{
+    width: 6%;
+}
+
+.header{
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divinputs{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto{
+    text-align: left;
+}
+
+input{
+    border: solid 3px #9551de;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 55vh;
+}
+
+span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 3%;
+}
+
+button{
+    background-color: #9551de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border: solid 3px #54BC90;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 45px;
+}
