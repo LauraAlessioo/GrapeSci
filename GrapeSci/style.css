@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Englebert&family=Merienda:wght@300..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+:root{
+    --color-maybe: #8025ab;
+}
 body{
-    font-family: "Englebert", cursive;
+    font-family: "League Spartan", sans-serif;
     min-height: 100vh;
     background: linear-gradient(to right, #54bd91,#54bd91);
     display: flex;
@@ -100,8 +104,8 @@ body{
     padding: 3rem;
     border-radius: 10px;
     position: relative;
+    bottom: 10px;
     height: 600px;
-    border-radius: 6px;
     box-shadow: 0 0 30px 0px #5427846f;
 }
 .login-card:before{
@@ -312,3 +316,13 @@ body{
     margin-right: 208px;
     margin-left: 4px;
   }
+    .centro{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .centro img{
+        width: 200px;
+    }

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+body{
+    font-family: "League Spartan", sans-serif;
+    background: #fffffc;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 0;
+}
+.header img{
+    width: 60px;
+}
+.header p{
+    opacity: 0;
+}
+.side-bar {
+    height: 90vh;
+    margin: 35px 15px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    background: #54bd91;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: width 0.5s ease;
+    position: absolute;
+    z-index: 100;
+}
+
+.sidebar ul {
+    transition: margin-right 1s ease;
+}
+
+.side-bar.expanded {
+    width: 220px;
+}
+
+.side-bar.expanded ul {
+    margin-right: 160px;
+    transition: 0.5s;
+}
+
+.side-bar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.side-bar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.side-bar i {
+    color: #fffffc;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-bar .uau{
+    color: #fffffc;
+    font-size: 25px;
+    position: relative;
+    top: 180px;
+}
+.side-bar .uau2{
+    color: #fffffc;
+    font-size: 25px;
+    position: relative;
+    top: 190px;
+}
+.side-bar i:hover{
+    background: #8025ab;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.side-bar .menu{
+    font-size: 30px;
+}
+.side-bar span{
+    position: absolute;
+    left: 80px;
+    margin-top: 3px;
+    color: #fffffc;
+    transition: margin-left 0.5s ease;
+}
+.side-bar .dif{
+    margin-top: 382px;
+}
+.side-bar .dif2{
+    margin-top: 362px;
+}
+.side-bar .menu:hover{
+    background: transparent;
+}
+
+.backing {
+    position: relative;
+}
+
+.backing svg {
+    transform: translateX(307px);
+}

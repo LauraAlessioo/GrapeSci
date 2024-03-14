@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resto.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="imagens/icon.png">
+
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="header">
+        <p>GrapeSci</p>
+        <img src="imagens/logo.png">
+        <img src="imagens/prof.png" alt="">
+    </div>
+   <div class="side-bar" id="sidebar">
+    <ul>
+        <li><i class='bx bx-menu menu' id="expandButton"></i></li>
+        <li><i class='bx bxs-dashboard' ></i> <span>Menu</span></li>
+        <li><i class='bx bxs-droplet' ></i><span>Umidade</span></li>
+        <li><i class='bx bxs-thermometer' ></i><span>Temperatura</span></li>
+        <li> <i class='bx bxs-moon uau2'></i><span class="dif">Modo noturno</span></li>
+        <li><i class='bx bx-log-out uau' ></i><span class="dif2">Log-out</span></li>
+    </ul>
+</div>
+
+</body>
+</html>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.getElementById("sidebar");
+    const expandButton = document.getElementById("expandButton");
+
+    expandButton.addEventListener("click", function() {
+        sidebar.classList.toggle("expanded");
+    });
+});
+
+</script>
