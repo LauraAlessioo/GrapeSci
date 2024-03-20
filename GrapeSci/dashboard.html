@@ -17,25 +17,43 @@
     </div>
    <div class="side-bar" id="sidebar">
     <ul>
-        <li><i class='bx bx-menu menu' id="expandButton"></i></li>
+        <li class="meni"><i class='bx bx-menu menu' id="expandButton"></i><h1 class="tit">Grape<h1 class="sci">Sci</h1></h1></li>
         <li><i class='bx bxs-dashboard' ></i> <span>Menu</span></li>
+        <li class="pesqui"><i class='bx bx-search pesq'></i><input type="text" placeholder="Pesquise aqui"></li>
         <li><i class='bx bxs-droplet' ></i><span>Umidade</span></li>
         <li><i class='bx bxs-thermometer' ></i><span>Temperatura</span></li>
-        <li> <i class='bx bxs-moon uau2'></i><span class="dif">Modo noturno</span></li>
-        <li><i class='bx bx-log-out uau' ></i><span class="dif2">Log-out</span></li>
+        <li class="bai1"> <i class='bx bxs-moon night'></i><span class="dif">Modo noturno</span></li>
+        <li class="bai"><i class='bx bx-log-out uau'></i><span class="dif2">Log-out</span></li>
     </ul>
 </div>
 
 </body>
 </html>
 <script>
-   document.addEventListener("DOMContentLoaded", function() {
-    const sidebar = document.getElementById("sidebar");
-    const expandButton = document.getElementById("expandButton");
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const expandButton = document.getElementById("expandButton");
 
-    expandButton.addEventListener("click", function() {
-        sidebar.classList.toggle("expanded");
+        expandButton.addEventListener("click", function() {
+            sidebar.classList.toggle("expanded");
+        });
+
+        const body = document.querySelector("body");
+
+        const nightModeToggle = document.querySelector('.night');
+
+
+        nightModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+
+
+            localStorage.setItem('nightMode', body.classList.contains('dark') ? 'true' : 'false');
+        });
+        
+        const nightMode = localStorage.getItem('nightMode');
+
+        if (nightMode === 'true') {
+            body.classList.add('dark');
+        }
     });
-});
-
 </script>

@@ -108,6 +108,44 @@ body{
     height: 600px;
     box-shadow: 0 0 30px 0px #5427846f;
 }
+.login-card-logoC .img2{
+    width: 300px;
+    margin-top: -127px;
+    margin-bottom: -100px;
+}
+.back {
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8025ab;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.back i{
+    font-size: 20px;
+    color: #fff;
+}
+.login-cardCc{
+    width: 800px;
+    background: #f6fff6da;
+    padding: 3rem;
+    border-radius: 10px;
+    position: relative;
+    bottom: 10px;
+    height: 600px;
+    box-shadow: 0 0 30px 0px #5427846f;
+}
 .login-card:before{
     content: '';
     position: absolute;
@@ -160,6 +198,28 @@ body{
     margin: 0;
     justify-content: center;
     align-items: center;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Ajuste conforme necessário */
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.col {
+    flex: 1;
+    margin-right: 10px; /* Ajuste conforme necessário */
+}
+.col2 {
+    flex: 1;
+     /* Ajuste conforme necessário */
+}
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: 50px;
 }
 .inputsC{
     width: 600px;
@@ -228,7 +288,27 @@ body{
     color: #ffffff;
     font-weight: 600;
     margin-top: 60px;
+    cursor: pointer;
     border-radius: 15px;
+}
+.btnCc{
+    width: 300px;
+    height: 45px;
+    background: #9641f7;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.btnCc:hover{
+    background: #54bd91;
+    transition: 0.3s;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
 }
 .btn:hover{
     background: #54bd91;
@@ -326,3 +406,4 @@ body{
     .centro img{
         width: 200px;
     }
+    
