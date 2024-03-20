@@ -18,12 +18,13 @@
     <div class="divinputs">
     <span><div class="texto">Digite o número de hectares:</span></div><input type="text" id="hectares">  <!--  Os hectares que tem disponível -->
     <div class="divinputs">
-    <span><div class="texto">Digite o tamanho dos hectares <b>(EM METROS)</b>:</span></div><input type="text" id="tamanho">  <!--  Tamanho de cada Hectare -->
+    <span><div class="texto"> Tamanho padrão de do hectare é <b>(0.1KM²)</b>:</span></div><input type="text" id="tamanho" max="0.1" value="0.1">  <!--  Tamanho padrão de cada Hectare -->
     <div class="divinputs">
     <span><div class="texto">Digite o preço por kilograma:</span></div><input type="text" id="kilo">  <!-- Preço das uvas por kilograma para venda -->
 </div>
     <div class="botao">
     <button onclick="calcularlucro()">Calcular Lucro</button>
+    <div id="div_mensagem"></div>
 </div>
 </div>
 </div>
@@ -34,15 +35,26 @@ function calcularlucro(){
     var investimento = Number(valor.value);  // Recebe os Valores das inputs
     var qtdVideiras = Number(uvas.value); // Recebe os Valores das inputs
     var num_hectares = Number(hectares.value); // Recebe os Valores das inputs
-    var tamanho_hectares = Number(tamanho.value); // Recebe os Valores das inputs
+    var tamanho_hectares = Number(tamanho.value); // O tamanho padrão de um hectare equivale a 0.1 km², porém se ele tiver um maior, deverá mudar o valor de 0.1 para 0.2 e assim por diante.
     var precoUva = Number(kilo.value); // Recebe os Valores das inputs
     var perda = 0.21; // Esse valor representa, em base nas pesquisas realizadas, a perda na produção de uvas
 
-    var videiras = (qtdVideiras * num_hectares / tamanho_hectares) * perda; // Aqui é o cálculo videira em cada hecatees e a sua perda.
-    var vendasUva = videiras * precoUva; // é o valor em que é vendido as uvas 
-    var resultadofinal = investimento - vendasUva; // Aqui o cálculo do lucro
+    var videirasperda = (qtdVideiras * num_hectares / tamanho_hectares * perda) - qtdVideiras; // Aqui é o cálculo videira em cada hecateres e a sua perda.
+    var vendasUva = videirasperda * precoUva; // é o valor em que é vendido as uvas 
+    var produzido = investimento - vendasUva; // Aqui o cálculo do lucro
+    var lucro = investimento - produzido
     var mensagem = 'Não é possível realizar o cálculo. Insira valores maiores que 0!'
-    var mensagem2 = `Seu investimento de R$:${investimento} lhe dará um retorno de: R$${resultadofinal}`
+    var mensagem2 = `Seu investimento de R$:${investimento}
+
+Com a quantidade de videiras ${qtdVideiras} multiplicada com o número de hectares de ${num_hectares} e dividindo
+esse valor pelo tamanho dos hectares de ${tamanho_hectares} depois calulando a perda de 21% se resulta em uma quantidade de videras de 
+${videirasperda}
+
+Sendo assim com um valor de ${precoUva} por cada Kilograma que será vendido, irá gerar um total de RS$${vendasUva}.
+
+E o valor que será produzido baseado em no seu investimento será um total de R$:${produzido}.
+
+Gerando um lucro de R$${lucro}`
 
     // Um if que realiza a verificação caso os valores forem 0. Não será possível fazer contas
     if (investimento <= 0){
@@ -50,13 +62,13 @@ function calcularlucro(){
         if (num_hectares <= 0){
         if (tamanho_hectares <= 0){
         if (precoUva <= 0){
-        alert (mensagem);
+            alert (mensagem); 
     }
     }
     } 
     } 
     }else{
-        alert (mensagem2); 
+     alert (mensagem2);
     }
 }
 </script>

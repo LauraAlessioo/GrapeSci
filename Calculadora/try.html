@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Investimento em Vinhedo</title>
+    <!-- Importando o SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .custom-modal {
+        height: 800px;
+    width: 800px;
+}
+
+.swal2-confirm {
+    background: #54BD91 !important; 
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+}
+    </style>
+</head>
+<body>
+    <!-- Botão para acionar o alerta -->
+    <button onclick="showAlert()">Verificar investimento</button>
+
+    <script>
+        // Função para exibir o alerta personalizado
+        function showAlert() {
+            // Valores a serem substituídos
+            const investimento = 5000;
+            const qtdVideiras = 1000;
+            const num_hectares = 5;
+            const tamanho_hectares = 2;
+            const videirasperda = 800;
+            const precoUva = 3.5;
+            const vendasUva = 2800;
+            const produzido = 14000;
+            const lucro = 9000;
+
+            // Exibindo o alerta com os valores substituídos
+            Swal.fire({
+                title: "Investimento em Vinhedo",
+                html: `Seu investimento de: <span style="font-size: 25px"><b>R$:${investimento}</b></span><br><br>
+                <img src="logo.png" style=" width: 150px;" alt="Logo"> <!-- Substitua pelo caminho correto da sua imagem -->
+                <br><br>
+                Com a quantidade de ${qtdVideiras} videiras  multiplicada com o número de hectares de ${num_hectares} e dividindo
+                esse valor pelo tamanho dos hectares de ${tamanho_hectares} depois calculando a perda de 21% resulta em uma quantidade de videiras de 
+                ${videirasperda}<br><br>
+                Sendo assim, com um valor de R$${precoUva} por cada quilo de uva que será vendido, irá gerar um total de R$${vendasUva}.<br><br>
+                E o valor que será produzido baseado no seu investimento será um total de R$${produzido}.<br><br>
+                Gerando um lucro de:  <span style="font-size: 25px"><b>R$:${lucro}</b></span>.`,
+                customClass: {
+                    popup: 'custom-modal', // Aplica a classe CSS personalizada ao modal
+                    confirmButton: 'swal2-confirm' // Aplica a classe CSS personalizada ao botão dentro do modal
+                }
+            });
+        }
+    </script>
+</body>
+</html>
