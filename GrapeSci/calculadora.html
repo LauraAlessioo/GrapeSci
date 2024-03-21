@@ -165,6 +165,7 @@
     } 
     } 
     }else{
+        if (lucro < investimento){
         Swal.fire({
                 title: "Investimento em Vinhedo",
                 html: `Seu investimento de: <span style="font-size: 25px"><b>R$:${investimento}</b></span><br><br>
@@ -175,12 +176,30 @@
                 de ${calcporkilo}KG de uvas. Considerando que uma videira produz em média ${qtdproduzidakilo}KG de uva.<br><br>
                 Sendo assim, com um valor de R$${precoUva} por cada quilo de uva que será vendido, irá gerar um total de R$${vendasUva}.<br><br></p>
 
-                Sendo assim, gerando um lucro total de:  <span style="font-size: 25px"><b>R$:${lucro}</b></span>.`,
+                Sendo assim, gerando um prejuízo total de:  <span style="font-size: 25px; color: red;"><b>R$:${lucro}</b></span>.`,
                 customClass: {
                     popup: 'custom-modal', 
                     confirmButton: 'swal2-confirm'
                 }
             });
+        }   else{
+            Swal.fire({
+                title: "Investimento em Vinhedo",
+                html: `Seu investimento de: <span style="font-size: 25px"><b>R$:${investimento}</b></span><br><br>
+                <img src="imagens/logo.png" style=" width: 100px;" alt="Logo"> <!-- Substitua pelo caminho correto da sua imagem -->
+                <br><br>
+                <p style=" text-align: justify;">Com a quantidade de ${qtdVideiras} videiras  e o número de hectares igual ${num_hectares} e distruibuindo
+                esse valor pelo tamanho dos hectares de ${tamanho_hectares} junto a perda de 21% resulta em uma quantidade de videiras, resulta em uma quantidade
+                de ${calcporkilo}KG de uvas. Considerando que uma videira produz em média ${qtdproduzidakilo}KG de uva.<br><br>
+                Sendo assim, com um valor de R$${precoUva} por cada quilo de uva que será vendido, irá gerar um total de R$${vendasUva}.<br><br></p>
+
+                Sendo assim, gerando um lucro total de:  <span style="font-size: 25px; color: green;"><b>R$:${lucro}</b></span>.`,
+                customClass: {
+                    popup: 'custom-modal', 
+                    confirmButton: 'swal2-confirm'
+                }
+            });
+        }
     }
 }
      
