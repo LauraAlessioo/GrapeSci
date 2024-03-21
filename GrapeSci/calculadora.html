@@ -90,47 +90,7 @@
         </div>
         <script>
      
-         function createParticle() {
-            var particlesContainer = document.getElementById('particles-container');
-            var minDistanceFromEdge = 20;
-             var particle = document.createElement('div');
-             particle.classList.add('particle');
-     
-             var posX = Math.random() * (window.innerWidth - minDistanceFromEdge * 2) + minDistanceFromEdge;
-             var posY = Math.random() * (window.innerHeight - minDistanceFromEdge * 2) + minDistanceFromEdge;
-     
-             var directionX = Math.random() > 0.5 ? 1 : -1;
-             var directionY = Math.random() > 0.5 ? 1 : -1;
-     
-             particle.style.left = posX + 'px';
-             particle.style.top = posY + 'px';
-     
-             particlesContainer.appendChild(particle);
-     
-             function moveParticle() {
-                 var newX = parseFloat(particle.style.left) + directionX;
-                 var newY = parseFloat(particle.style.top) + directionY;
-     
-                 if (newX < minDistanceFromEdge || newX > window.innerWidth - minDistanceFromEdge) {
-                     directionX *= -1;
-                 }
-                 if (newY < minDistanceFromEdge || newY > window.innerHeight - minDistanceFromEdge) {
-                     directionY *= -1;
-                 }
-     
-                 particle.style.left = newX + 'px';
-                 particle.style.top = newY + 'px';
-             }
-     
-             setTimeout(function() {
-                 particle.remove();
-             }, 18000);
-     
-             setInterval(moveParticle, 50);
-         }
-     
-         setInterval(createParticle, 1000);
-     
+        
      function calcularlucro(){
     var investimento = Number(valor.value);  // Recebe os Valores das inputs
     var qtdVideiras = Number(uvas.value); // Recebe os Valores das inputs
@@ -145,6 +105,7 @@
     var vendasUva = calcporkilo * precoUva; // é o valor em que é vendido as uvas 
     var lucro = vendasUva - investimento; // Aqui o cálculo do lucro
     var mensagem = 'Não é possível realizar o cálculo. Insira valores maiores que 0!';
+
     // Um if que realiza a verificação caso os valores forem 0. Não será possível fazer contas
     if (investimento <= 0){
         if (qtdVideiras <= 0){
